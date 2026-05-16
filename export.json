@@ -1,0 +1,1604 @@
+{
+  "jql": "project = ffb and \"Feature ID\" ~ \"CB015880-SR\"",
+  "total": 1,
+  "issues": [
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "18422816",
+      "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18422816",
+      "key": "FFB-64669",
+      "fields": {
+        "customfield_43790": null,
+        "customfield_38763": null,
+        "customfield_38401": null,
+        "customfield_49890": null,
+        "resolution": null,
+        "customfield_31694": null,
+        "customfield_38759": null,
+        "customfield_23390": null,
+        "customfield_31691": null,
+        "customfield_47006": null,
+        "customfield_47005": null,
+        "lastViewed": "2026-05-06T11:45:52.483+0300",
+        "customfield_47008": null,
+        "customfield_47007": null,
+        "customfield_47002": null,
+        "customfield_44890": [
+          {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/285719",
+            "value": "PtP 7-2a NCY",
+            "id": "285719",
+            "disabled": false
+          },
+          {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/279833",
+            "value": "PtP 7-2e NCY",
+            "id": "279833",
+            "disabled": false
+          }
+        ],
+        "customfield_47001": null,
+        "customfield_38771": null,
+        "customfield_47004": null,
+        "customfield_47003": null,
+        "customfield_46393": null,
+        "customfield_46392": null,
+        "customfield_47000": null,
+        "customfield_46394": null,
+        "customfield_46391": null,
+        "labels": [
+          "26R2_NO_COMMITMENT",
+          "26R3_P2_COMMITTED",
+          "26R3_RF7.1_P2_CANDIDATE",
+          "26R3_RJIO_Priority_P1",
+          "KPI_Analysis_Exempt",
+          "RF7.1_AVENA",
+          "RL1_RF7.1",
+          "RL1_subFOT_contact",
+          "ReqAccFS0EE",
+          "ReqAccFS2EE"
+        ],
+        "customfield_14545": null,
+        "customfield_28290": null,
+        "customfield_46390": null,
+        "customfield_28295": null,
+        "customfield_37449": null,
+        "aggregatetimeoriginalestimate": null,
+        "issuelinks": [
+          {
+            "id": "21199267",
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLink/21199267",
+            "type": {
+              "id": "11080",
+              "name": "Estimate",
+              "inward": "is estimated on",
+              "outward": "is estimated by",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLinkType/11080"
+            },
+            "outwardIssue": {
+              "id": "18423149",
+              "key": "FPB-1481435",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18423149",
+              "fields": {
+                "summary": "STA - CB015880-SR mMIMO configs for Dual band radio with FDD NR/LTE and TDD NR/LTE",
+                "status": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/status/10046",
+                  "description": "When the work for FI, User Story or Task is done",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/images/icons/statuses/closed.png",
+                  "name": "Done",
+                  "id": "10046",
+                  "statusCategory": {
+                    "self": "https://jiradc.ext.net.nokia.com/rest/api/2/statuscategory/3",
+                    "id": 3,
+                    "key": "done",
+                    "colorName": "success",
+                    "name": "Done"
+                  }
+                },
+                "issuetype": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issuetype/18105",
+                  "id": "18105",
+                  "description": "Fusion Project",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/secure/viewavatar?size=xsmall&avatarId=43618&avatarType=issuetype",
+                  "name": "System Technical Analysis",
+                  "subtask": false,
+                  "avatarId": 43618
+                }
+              }
+            }
+          },
+          {
+            "id": "21199011",
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLink/21199011",
+            "type": {
+              "id": "10580",
+              "name": "Parent",
+              "inward": "is child of",
+              "outward": "is parent of",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLinkType/10580"
+            },
+            "outwardIssue": {
+              "id": "18423074",
+              "key": "FPB-1481405",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18423074",
+              "fields": {
+                "summary": "CB015880-SR-FS1TA - mMIMO configs for Dual band radio with FDD NR/LTE and TDD NR/LTE ",
+                "status": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/status/10046",
+                  "description": "When the work for FI, User Story or Task is done",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/images/icons/statuses/closed.png",
+                  "name": "Done",
+                  "id": "10046",
+                  "statusCategory": {
+                    "self": "https://jiradc.ext.net.nokia.com/rest/api/2/statuscategory/3",
+                    "id": 3,
+                    "key": "done",
+                    "colorName": "success",
+                    "name": "Done"
+                  }
+                },
+                "issuetype": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issuetype/15101",
+                  "id": "15101",
+                  "description": "Fusion Project",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/secure/viewavatar?size=xsmall&avatarId=43622&avatarType=issuetype",
+                  "name": "System Item",
+                  "subtask": false,
+                  "avatarId": 43622
+                }
+              }
+            }
+          },
+          {
+            "id": "21348268",
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLink/21348268",
+            "type": {
+              "id": "10580",
+              "name": "Parent",
+              "inward": "is child of",
+              "outward": "is parent of",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLinkType/10580"
+            },
+            "outwardIssue": {
+              "id": "18499509",
+              "key": "FPB-1492493",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18499509",
+              "fields": {
+                "summary": "CB015880-SR-Z mMIMO configs for Dual band radio with FDD NR/LTE and TDD NR/LTE Early planning and Effort reservation",
+                "status": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/status/14726",
+                  "description": "",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/images/icons/statuses/generic.png",
+                  "name": "Obsolete",
+                  "id": "14726",
+                  "statusCategory": {
+                    "self": "https://jiradc.ext.net.nokia.com/rest/api/2/statuscategory/3",
+                    "id": 3,
+                    "key": "done",
+                    "colorName": "success",
+                    "name": "Done"
+                  }
+                },
+                "issuetype": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issuetype/15101",
+                  "id": "15101",
+                  "description": "Fusion Project",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/secure/viewavatar?size=xsmall&avatarId=43622&avatarType=issuetype",
+                  "name": "System Item",
+                  "subtask": false,
+                  "avatarId": 43622
+                }
+              }
+            }
+          },
+          {
+            "id": "21360193",
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLink/21360193",
+            "type": {
+              "id": "10580",
+              "name": "Parent",
+              "inward": "is child of",
+              "outward": "is parent of",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLinkType/10580"
+            },
+            "outwardIssue": {
+              "id": "18506072",
+              "key": "FPB-1493737",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18506072",
+              "fields": {
+                "summary": "CB015880-SR-GFW mMIMO configs for Dual band radio with FDD NR/LTE and TDD NR/LTE",
+                "status": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/status/18031",
+                  "description": "It has been agreed to develop this feature in the given release with the given priority. R&D and I&V may spend effort on this backlog item.",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/images/icons/statuses/generic.png",
+                  "name": "Approved for Dev",
+                  "id": "18031",
+                  "statusCategory": {
+                    "self": "https://jiradc.ext.net.nokia.com/rest/api/2/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "inprogress",
+                    "name": "In Progress"
+                  }
+                },
+                "issuetype": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issuetype/15101",
+                  "id": "15101",
+                  "description": "Fusion Project",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/secure/viewavatar?size=xsmall&avatarId=43622&avatarType=issuetype",
+                  "name": "System Item",
+                  "subtask": false,
+                  "avatarId": 43622
+                }
+              }
+            }
+          },
+          {
+            "id": "21362351",
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLink/21362351",
+            "type": {
+              "id": "10580",
+              "name": "Parent",
+              "inward": "is child of",
+              "outward": "is parent of",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLinkType/10580"
+            },
+            "outwardIssue": {
+              "id": "18507227",
+              "key": "FPB-1493881",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18507227",
+              "fields": {
+                "summary": "CB015880-SR-A FDD LTE and TDD LTE configuration with AVENA on ABIP+ABIO",
+                "status": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/status/18031",
+                  "description": "It has been agreed to develop this feature in the given release with the given priority. R&D and I&V may spend effort on this backlog item.",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/images/icons/statuses/generic.png",
+                  "name": "Approved for Dev",
+                  "id": "18031",
+                  "statusCategory": {
+                    "self": "https://jiradc.ext.net.nokia.com/rest/api/2/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "inprogress",
+                    "name": "In Progress"
+                  }
+                },
+                "issuetype": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issuetype/15101",
+                  "id": "15101",
+                  "description": "Fusion Project",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/secure/viewavatar?size=xsmall&avatarId=43622&avatarType=issuetype",
+                  "name": "System Item",
+                  "subtask": false,
+                  "avatarId": 43622
+                }
+              }
+            }
+          },
+          {
+            "id": "21913024",
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLink/21913024",
+            "type": {
+              "id": "10580",
+              "name": "Parent",
+              "inward": "is child of",
+              "outward": "is parent of",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLinkType/10580"
+            },
+            "outwardIssue": {
+              "id": "18783968",
+              "key": "FPB-1535449",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18783968",
+              "fields": {
+                "summary": "CB015880-SR-B FDD LTE/NR and TDD LTE configuration with AVENA on ABIP+ABIO",
+                "status": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/status/18031",
+                  "description": "It has been agreed to develop this feature in the given release with the given priority. R&D and I&V may spend effort on this backlog item.",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/images/icons/statuses/generic.png",
+                  "name": "Approved for Dev",
+                  "id": "18031",
+                  "statusCategory": {
+                    "self": "https://jiradc.ext.net.nokia.com/rest/api/2/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "inprogress",
+                    "name": "In Progress"
+                  }
+                },
+                "issuetype": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issuetype/15101",
+                  "id": "15101",
+                  "description": "Fusion Project",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/secure/viewavatar?size=xsmall&avatarId=43622&avatarType=issuetype",
+                  "name": "System Item",
+                  "subtask": false,
+                  "avatarId": 43622
+                }
+              }
+            }
+          },
+          {
+            "id": "21912788",
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLink/21912788",
+            "type": {
+              "id": "10580",
+              "name": "Parent",
+              "inward": "is child of",
+              "outward": "is parent of",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLinkType/10580"
+            },
+            "outwardIssue": {
+              "id": "18784084",
+              "key": "FPB-1535450",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18784084",
+              "fields": {
+                "summary": "CB015880-SR-E FDD NR and TDD NR/LTE mMIMO configuration with AVENA on ABIP + ABIO",
+                "status": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/status/18031",
+                  "description": "It has been agreed to develop this feature in the given release with the given priority. R&D and I&V may spend effort on this backlog item.",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/images/icons/statuses/generic.png",
+                  "name": "Approved for Dev",
+                  "id": "18031",
+                  "statusCategory": {
+                    "self": "https://jiradc.ext.net.nokia.com/rest/api/2/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "inprogress",
+                    "name": "In Progress"
+                  }
+                },
+                "issuetype": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issuetype/15101",
+                  "id": "15101",
+                  "description": "Fusion Project",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/secure/viewavatar?size=xsmall&avatarId=43622&avatarType=issuetype",
+                  "name": "System Item",
+                  "subtask": false,
+                  "avatarId": 43622
+                }
+              }
+            }
+          },
+          {
+            "id": "21912790",
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLink/21912790",
+            "type": {
+              "id": "10580",
+              "name": "Parent",
+              "inward": "is child of",
+              "outward": "is parent of",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLinkType/10580"
+            },
+            "outwardIssue": {
+              "id": "18784085",
+              "key": "FPB-1535452",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18784085",
+              "fields": {
+                "summary": "CB015880-SR-D FDD NR/LTE and TDD NR/LTE mMIMO configuration with AVENA on 2xABIP + ABIO",
+                "status": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/status/18031",
+                  "description": "It has been agreed to develop this feature in the given release with the given priority. R&D and I&V may spend effort on this backlog item.",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/images/icons/statuses/generic.png",
+                  "name": "Approved for Dev",
+                  "id": "18031",
+                  "statusCategory": {
+                    "self": "https://jiradc.ext.net.nokia.com/rest/api/2/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "inprogress",
+                    "name": "In Progress"
+                  }
+                },
+                "issuetype": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issuetype/15101",
+                  "id": "15101",
+                  "description": "Fusion Project",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/secure/viewavatar?size=xsmall&avatarId=43622&avatarType=issuetype",
+                  "name": "System Item",
+                  "subtask": false,
+                  "avatarId": 43622
+                }
+              }
+            }
+          },
+          {
+            "id": "21912794",
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLink/21912794",
+            "type": {
+              "id": "10580",
+              "name": "Parent",
+              "inward": "is child of",
+              "outward": "is parent of",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLinkType/10580"
+            },
+            "outwardIssue": {
+              "id": "18784087",
+              "key": "FPB-1535453",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18784087",
+              "fields": {
+                "summary": "CB015880-SR-C FDD NR and TDD LTE mMIMO configuration with AVENA on ABIP + ABIO",
+                "status": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/status/18031",
+                  "description": "It has been agreed to develop this feature in the given release with the given priority. R&D and I&V may spend effort on this backlog item.",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/images/icons/statuses/generic.png",
+                  "name": "Approved for Dev",
+                  "id": "18031",
+                  "statusCategory": {
+                    "self": "https://jiradc.ext.net.nokia.com/rest/api/2/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "inprogress",
+                    "name": "In Progress"
+                  }
+                },
+                "issuetype": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issuetype/15101",
+                  "id": "15101",
+                  "description": "Fusion Project",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/secure/viewavatar?size=xsmall&avatarId=43622&avatarType=issuetype",
+                  "name": "System Item",
+                  "subtask": false,
+                  "avatarId": 43622
+                }
+              }
+            }
+          },
+          {
+            "id": "21913076",
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLink/21913076",
+            "type": {
+              "id": "10580",
+              "name": "Parent",
+              "inward": "is child of",
+              "outward": "is parent of",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLinkType/10580"
+            },
+            "outwardIssue": {
+              "id": "18783990",
+              "key": "FPB-1535465",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18783990",
+              "fields": {
+                "summary": "CB015880-SR-FH Configuration block of 3 sectors AVENA and other radios in Two BTS #2",
+                "status": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/status/18031",
+                  "description": "It has been agreed to develop this feature in the given release with the given priority. R&D and I&V may spend effort on this backlog item.",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/images/icons/statuses/generic.png",
+                  "name": "Approved for Dev",
+                  "id": "18031",
+                  "statusCategory": {
+                    "self": "https://jiradc.ext.net.nokia.com/rest/api/2/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "inprogress",
+                    "name": "In Progress"
+                  }
+                },
+                "issuetype": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issuetype/15101",
+                  "id": "15101",
+                  "description": "Fusion Project",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/secure/viewavatar?size=xsmall&avatarId=43622&avatarType=issuetype",
+                  "name": "System Item",
+                  "subtask": false,
+                  "avatarId": 43622
+                }
+              }
+            }
+          },
+          {
+            "id": "21913078",
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLink/21913078",
+            "type": {
+              "id": "10580",
+              "name": "Parent",
+              "inward": "is child of",
+              "outward": "is parent of",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLinkType/10580"
+            },
+            "outwardIssue": {
+              "id": "18783991",
+              "key": "FPB-1535466",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18783991",
+              "fields": {
+                "summary": "CB015880-SR-FG Configuration block of 3 sectors AVENA and other radios in Two BTS #1",
+                "status": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/status/18031",
+                  "description": "It has been agreed to develop this feature in the given release with the given priority. R&D and I&V may spend effort on this backlog item.",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/images/icons/statuses/generic.png",
+                  "name": "Approved for Dev",
+                  "id": "18031",
+                  "statusCategory": {
+                    "self": "https://jiradc.ext.net.nokia.com/rest/api/2/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "inprogress",
+                    "name": "In Progress"
+                  }
+                },
+                "issuetype": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issuetype/15101",
+                  "id": "15101",
+                  "description": "Fusion Project",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/secure/viewavatar?size=xsmall&avatarId=43622&avatarType=issuetype",
+                  "name": "System Item",
+                  "subtask": false,
+                  "avatarId": 43622
+                }
+              }
+            }
+          },
+          {
+            "id": "21913080",
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLink/21913080",
+            "type": {
+              "id": "10580",
+              "name": "Parent",
+              "inward": "is child of",
+              "outward": "is parent of",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLinkType/10580"
+            },
+            "outwardIssue": {
+              "id": "18783993",
+              "key": "FPB-1535467",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18783993",
+              "fields": {
+                "summary": "CB015880-SR-FF NR FDD +LTE TDD/ NR TDD on AVENA + FDD NR/TDD NR configuration in another Radio",
+                "status": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/status/18031",
+                  "description": "It has been agreed to develop this feature in the given release with the given priority. R&D and I&V may spend effort on this backlog item.",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/images/icons/statuses/generic.png",
+                  "name": "Approved for Dev",
+                  "id": "18031",
+                  "statusCategory": {
+                    "self": "https://jiradc.ext.net.nokia.com/rest/api/2/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "inprogress",
+                    "name": "In Progress"
+                  }
+                },
+                "issuetype": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issuetype/15101",
+                  "id": "15101",
+                  "description": "Fusion Project",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/secure/viewavatar?size=xsmall&avatarId=43622&avatarType=issuetype",
+                  "name": "System Item",
+                  "subtask": false,
+                  "avatarId": 43622
+                }
+              }
+            }
+          },
+          {
+            "id": "21913082",
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLink/21913082",
+            "type": {
+              "id": "10580",
+              "name": "Parent",
+              "inward": "is child of",
+              "outward": "is parent of",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLinkType/10580"
+            },
+            "outwardIssue": {
+              "id": "18783994",
+              "key": "FPB-1535468",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18783994",
+              "fields": {
+                "summary": "CB015880-SR-FE NR FDD /LTE TDD on AVENA + FDD NR/TDD NR configuration in another Radio",
+                "status": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/status/18031",
+                  "description": "It has been agreed to develop this feature in the given release with the given priority. R&D and I&V may spend effort on this backlog item.",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/images/icons/statuses/generic.png",
+                  "name": "Approved for Dev",
+                  "id": "18031",
+                  "statusCategory": {
+                    "self": "https://jiradc.ext.net.nokia.com/rest/api/2/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "inprogress",
+                    "name": "In Progress"
+                  }
+                },
+                "issuetype": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issuetype/15101",
+                  "id": "15101",
+                  "description": "Fusion Project",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/secure/viewavatar?size=xsmall&avatarId=43622&avatarType=issuetype",
+                  "name": "System Item",
+                  "subtask": false,
+                  "avatarId": 43622
+                }
+              }
+            }
+          },
+          {
+            "id": "21913084",
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLink/21913084",
+            "type": {
+              "id": "10580",
+              "name": "Parent",
+              "inward": "is child of",
+              "outward": "is parent of",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLinkType/10580"
+            },
+            "outwardIssue": {
+              "id": "18783995",
+              "key": "FPB-1535470",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18783995",
+              "fields": {
+                "summary": "CB015880-SR-FD TDD LTE/FDD LTE  + NR FDD on AVENA + FDD NR/TDD NR configuration in another Radio #2",
+                "status": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/status/18031",
+                  "description": "It has been agreed to develop this feature in the given release with the given priority. R&D and I&V may spend effort on this backlog item.",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/images/icons/statuses/generic.png",
+                  "name": "Approved for Dev",
+                  "id": "18031",
+                  "statusCategory": {
+                    "self": "https://jiradc.ext.net.nokia.com/rest/api/2/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "inprogress",
+                    "name": "In Progress"
+                  }
+                },
+                "issuetype": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issuetype/15101",
+                  "id": "15101",
+                  "description": "Fusion Project",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/secure/viewavatar?size=xsmall&avatarId=43622&avatarType=issuetype",
+                  "name": "System Item",
+                  "subtask": false,
+                  "avatarId": 43622
+                }
+              }
+            }
+          },
+          {
+            "id": "21912915",
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLink/21912915",
+            "type": {
+              "id": "10580",
+              "name": "Parent",
+              "inward": "is child of",
+              "outward": "is parent of",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLinkType/10580"
+            },
+            "outwardIssue": {
+              "id": "18784234",
+              "key": "FPB-1535472",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18784234",
+              "fields": {
+                "summary": "CB015880-SR-FC TDD LTE/FDD LTE  + NR FDD on AVENA + FDD NR/TDD NR configuration in another Radio #1",
+                "status": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/status/18031",
+                  "description": "It has been agreed to develop this feature in the given release with the given priority. R&D and I&V may spend effort on this backlog item.",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/images/icons/statuses/generic.png",
+                  "name": "Approved for Dev",
+                  "id": "18031",
+                  "statusCategory": {
+                    "self": "https://jiradc.ext.net.nokia.com/rest/api/2/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "inprogress",
+                    "name": "In Progress"
+                  }
+                },
+                "issuetype": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issuetype/15101",
+                  "id": "15101",
+                  "description": "Fusion Project",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/secure/viewavatar?size=xsmall&avatarId=43622&avatarType=issuetype",
+                  "name": "System Item",
+                  "subtask": false,
+                  "avatarId": 43622
+                }
+              }
+            }
+          },
+          {
+            "id": "21912917",
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLink/21912917",
+            "type": {
+              "id": "10580",
+              "name": "Parent",
+              "inward": "is child of",
+              "outward": "is parent of",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLinkType/10580"
+            },
+            "outwardIssue": {
+              "id": "18784235",
+              "key": "FPB-1535473",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18784235",
+              "fields": {
+                "summary": "CB015880-SR-FB TDD LTE/FDD LTE on AVENA + FDD NR/TDD NR configuration in another Radio #2",
+                "status": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/status/18031",
+                  "description": "It has been agreed to develop this feature in the given release with the given priority. R&D and I&V may spend effort on this backlog item.",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/images/icons/statuses/generic.png",
+                  "name": "Approved for Dev",
+                  "id": "18031",
+                  "statusCategory": {
+                    "self": "https://jiradc.ext.net.nokia.com/rest/api/2/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "inprogress",
+                    "name": "In Progress"
+                  }
+                },
+                "issuetype": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issuetype/15101",
+                  "id": "15101",
+                  "description": "Fusion Project",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/secure/viewavatar?size=xsmall&avatarId=43622&avatarType=issuetype",
+                  "name": "System Item",
+                  "subtask": false,
+                  "avatarId": 43622
+                }
+              }
+            }
+          },
+          {
+            "id": "21912919",
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLink/21912919",
+            "type": {
+              "id": "10580",
+              "name": "Parent",
+              "inward": "is child of",
+              "outward": "is parent of",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issueLinkType/10580"
+            },
+            "outwardIssue": {
+              "id": "18784236",
+              "key": "FPB-1535476",
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18784236",
+              "fields": {
+                "summary": "CB015880-SR-FA TDD LTE/FDD LTE on AVENA + FDD NR/TDD NR configuration in another Radio #1",
+                "status": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/status/18031",
+                  "description": "It has been agreed to develop this feature in the given release with the given priority. R&D and I&V may spend effort on this backlog item.",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/images/icons/statuses/generic.png",
+                  "name": "Approved for Dev",
+                  "id": "18031",
+                  "statusCategory": {
+                    "self": "https://jiradc.ext.net.nokia.com/rest/api/2/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "inprogress",
+                    "name": "In Progress"
+                  }
+                },
+                "issuetype": {
+                  "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issuetype/15101",
+                  "id": "15101",
+                  "description": "Fusion Project",
+                  "iconUrl": "https://jiradc.ext.net.nokia.com/secure/viewavatar?size=xsmall&avatarId=43622&avatarType=issuetype",
+                  "name": "System Item",
+                  "subtask": false,
+                  "avatarId": 43622
+                }
+              }
+            }
+          }
+        ],
+        "assignee": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/user?username=kewang",
+          "name": "kewang",
+          "key": "kewang",
+          "emailAddress": "kevin.k.wang@nokia.com",
+          "avatarUrls": {
+            "48x48": "https://jiradc.ext.net.nokia.com/secure/useravatar?avatarId=37775",
+            "24x24": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=small&avatarId=37775",
+            "16x16": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=xsmall&avatarId=37775",
+            "32x32": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=medium&avatarId=37775"
+          },
+          "displayName": "Kevin K. Wang (Nokia)",
+          "active": true,
+          "timeZone": "Europe/Helsinki"
+        },
+        "customfield_38093": null,
+        "customfield_47017": null,
+        "customfield_48900": 2519.0,
+        "customfield_47016": null,
+        "components": [],
+        "customfield_43690": null,
+        "customfield_47013": null,
+        "customfield_43691": null,
+        "customfield_47496": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/312677",
+          "value": "No",
+          "id": "312677",
+          "disabled": false
+        },
+        "customfield_47015": null,
+        "customfield_47014": null,
+        "customfield_47011": null,
+        "customfield_38303": null,
+        "customfield_47010": null,
+        "customfield_38304": "\"CuDo\",\"Entity Specification\",\"Pre-analysis\",\"SW\",\"System Specification\",\"System Testing Preparation\",\"System Testing\"",
+        "customfield_45190": "|SW|66.15|\n|System Testing|100.00|\n|Pre-analysis|100.00|\n|CuDo|100.00|\n|Entity Specification|100.00|\n|System Specification|100.00|\n",
+        "customfield_37217": null,
+        "customfield_31591": null,
+        "customfield_37698": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/226026",
+          "value": "CQI Plan",
+          "id": "226026",
+          "disabled": false
+        },
+        "customfield_27890": null,
+        "customfield_31590": null,
+        "customfield_50790": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/378010",
+          "value": "Not Applicable",
+          "id": "378010",
+          "disabled": false
+        },
+        "customfield_27893": null,
+        "customfield_50791": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/378011",
+          "value": "Not Applicable",
+          "id": "378011",
+          "disabled": false
+        },
+        "customfield_37211": null,
+        "customfield_39190": null,
+        "customfield_39191": null,
+        "customfield_39192": null,
+        "customfield_44790": null,
+        "customfield_44791": null,
+        "subtasks": [],
+        "customfield_38310": null,
+        "reporter": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/user?username=fjira2",
+          "name": "fjira2",
+          "key": "fjira2",
+          "emailAddress": "dashboard.admin-miner@nokia.com",
+          "avatarUrls": {
+            "48x48": "https://jiradc.ext.net.nokia.com/secure/useravatar?avatarId=10472",
+            "24x24": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=small&avatarId=10472",
+            "16x16": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=xsmall&avatarId=10472",
+            "32x32": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=medium&avatarId=10472"
+          },
+          "displayName": "fjira user",
+          "active": true,
+          "timeZone": "Europe/Helsinki"
+        },
+        "customfield_38435": null,
+        "customfield_39525": "9223372036854775807",
+        "customfield_48590": null,
+        "customfield_39526": "9223372036854775807",
+        "customfield_48591": null,
+        "customfield_28191": "FN2078",
+        "customfield_10830": null,
+        "customfield_10832": null,
+        "customfield_40505": null,
+        "customfield_30392": null,
+        "customfield_37103": null,
+        "customfield_37100": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/273158",
+          "value": "TEC",
+          "id": "273158",
+          "disabled": false
+        },
+        "customfield_40620": null,
+        "customfield_48907": 2618.0,
+        "progress": {
+          "progress": 0,
+          "total": 0
+        },
+        "customfield_37461": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/295450",
+          "value": "EMEA",
+          "id": "295450",
+          "disabled": true
+        },
+        "customfield_48905": 2602.0,
+        "votes": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/FFB-64669/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "worklog": {
+          "startAt": 0,
+          "maxResults": 20,
+          "total": 0,
+          "worklogs": []
+        },
+        "customfield_48906": 2612.0,
+        "customfield_40503": null,
+        "customfield_44303": [
+          {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/273611",
+            "value": "Others",
+            "id": "273611",
+            "disabled": false
+          }
+        ],
+        "customfield_48903": 2611.0,
+        "archivedby": null,
+        "customfield_48904": 2522.0,
+        "customfield_48901": 2526.0,
+        "customfield_48902": 2602.0,
+        "issuetype": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issuetype/18101",
+          "id": "18101",
+          "description": "Fusion Project",
+          "iconUrl": "https://jiradc.ext.net.nokia.com/secure/viewavatar?size=xsmall&avatarId=43627&avatarType=issuetype",
+          "name": "Customer Feature",
+          "subtask": false,
+          "avatarId": 43627
+        },
+        "customfield_39890": null,
+        "customfield_45890": null,
+        "project": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/project/42894",
+          "id": "42894",
+          "key": "FFB",
+          "name": "Fusion Feature Backlog",
+          "projectTypeKey": "business",
+          "avatarUrls": {
+            "48x48": "https://jiradc.ext.net.nokia.com/secure/projectavatar?pid=42894&avatarId=37756",
+            "24x24": "https://jiradc.ext.net.nokia.com/secure/projectavatar?size=small&pid=42894&avatarId=37756",
+            "16x16": "https://jiradc.ext.net.nokia.com/secure/projectavatar?size=xsmall&pid=42894&avatarId=37756",
+            "32x32": "https://jiradc.ext.net.nokia.com/secure/projectavatar?size=medium&pid=42894&avatarId=37756"
+          },
+          "projectCategory": {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/projectCategory/17100",
+            "id": "17100",
+            "description": "Fusion Project",
+            "name": "Fusion Feature"
+          }
+        },
+        "customfield_49690": "FN2078",
+        "customfield_45090": [
+          {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/337029",
+            "value": "26R2",
+            "id": "337029",
+            "disabled": false
+          },
+          {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/337032",
+            "value": "26R3",
+            "id": "337032",
+            "disabled": false
+          }
+        ],
+        "customfield_37911": [
+          {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/204405",
+            "value": "\"If this bug is a customer specific issue please uncheck this field\"",
+            "id": "204405",
+            "disabled": false
+          }
+        ],
+        "customfield_31492": "GIVEN\r\nWHEN\r\nTHEN",
+        "customfield_50690": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/377711",
+          "value": "Activated by default",
+          "id": "377711",
+          "disabled": false
+        },
+        "resolutiondate": null,
+        "customfield_37112": null,
+        "customfield_28645": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/49711",
+          "value": "No",
+          "id": "49711",
+          "disabled": false
+        },
+        "customfield_40633": null,
+        "customfield_40513": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/226032",
+          "value": "Yes",
+          "id": "226032",
+          "disabled": false
+        },
+        "customfield_46995": null,
+        "customfield_46994": null,
+        "watches": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/FFB-64669/watchers",
+          "watchCount": 4,
+          "isWatching": true
+        },
+        "customfield_38690": null,
+        "customfield_46997": null,
+        "customfield_38691": [
+          {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/211352",
+            "value": "Not using yet",
+            "id": "211352",
+            "disabled": false
+          }
+        ],
+        "customfield_46996": null,
+        "customfield_38692": null,
+        "customfield_46991": null,
+        "customfield_38693": null,
+        "customfield_46990": null,
+        "customfield_38694": null,
+        "customfield_46993": null,
+        "customfield_38695": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/user?username=kewang",
+          "name": "kewang",
+          "key": "kewang",
+          "emailAddress": "kevin.k.wang@nokia.com",
+          "avatarUrls": {
+            "48x48": "https://jiradc.ext.net.nokia.com/secure/useravatar?avatarId=37775",
+            "24x24": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=small&avatarId=37775",
+            "16x16": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=xsmall&avatarId=37775",
+            "32x32": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=medium&avatarId=37775"
+          },
+          "displayName": "Kevin K. Wang (Nokia)",
+          "active": true,
+          "timeZone": "Europe/Helsinki"
+        },
+        "customfield_46992": [],
+        "customfield_38696": null,
+        "customfield_28090": null,
+        "customfield_38697": null,
+        "customfield_38698": [
+          {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/user?username=gora",
+            "name": "gora",
+            "key": "gora",
+            "emailAddress": "jacek.gora@nokia.com",
+            "avatarUrls": {
+              "48x48": "https://jiradc.ext.net.nokia.com/secure/useravatar?avatarId=10472",
+              "24x24": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=small&avatarId=10472",
+              "16x16": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=xsmall&avatarId=10472",
+              "32x32": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=medium&avatarId=10472"
+            },
+            "displayName": "Jacek Gora (Nokia)",
+            "active": true,
+            "timeZone": "Europe/Helsinki"
+          }
+        ],
+        "customfield_38699": [
+          {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/293015",
+            "value": "RAN",
+            "id": "293015",
+            "disabled": false
+          }
+        ],
+        "customfield_44690": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/277056",
+          "value": "cw47",
+          "id": "277056",
+          "disabled": false
+        },
+        "customfield_28093": "UTAS",
+        "customfield_42390": null,
+        "customfield_40090": null,
+        "customfield_37800": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/269845",
+          "value": "Yes",
+          "id": "269845",
+          "disabled": false
+        },
+        "customfield_26592": [
+          {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/44610",
+            "value": "none",
+            "id": "44610",
+            "disabled": false
+          }
+        ],
+        "customfield_37003": null,
+        "customfield_37364": "true",
+        "customfield_37121": null,
+        "customfield_51090": null,
+        "updated": "2026-05-05T12:25:24.000+0300",
+        "customfield_28657": null,
+        "customfield_38220": "\"CP1 contribution\",\"CP1\",\"CP2 contribution\",\"CP2\",\"FS1TA contribution\",\"FS1TA\",\"SCT only\"",
+        "customfield_12790": null,
+        "timeoriginalestimate": null,
+        "description": "This feature introduce configuration for the dual band radio ,e.g. AVENA with FDD NR/LTE and TDD NR/LTE coexisting inside one radio.",
+        "customfield_38103": null,
+        "customfield_45790": null,
+        "customfield_47291": null,
+        "customfield_49591": null,
+        "customfield_47290": null,
+        "customfield_49592": null,
+        "timetracking": {},
+        "customfield_49590": null,
+        "customfield_32001": null,
+        "customfield_37017": null,
+        "customfield_12309": null,
+        "customfield_46999": null,
+        "customfield_46998": null,
+        "summary": "CB015880-SR AVENA related configs on ABIO/ABIP",
+        "customfield_45324": [],
+        "customfield_38472": null,
+        "customfield_37819": null,
+        "customfield_46890": null,
+        "customfield_38237": null,
+        "customfield_32006": [
+          {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/52681",
+            "value": "None",
+            "id": "52681",
+            "disabled": false
+          }
+        ],
+        "customfield_32005": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/51860",
+          "value": "None",
+          "id": "51860",
+          "disabled": false
+        },
+        "customfield_48390": null,
+        "environment": null,
+        "customfield_37027": null,
+        "duedate": null,
+        "customfield_32011": null,
+        "comment": {
+          "comments": [
+            {
+              "self": "https://jiradc.ext.net.nokia.com/rest/api/2/issue/18422816/comment/17260343",
+              "id": "17260343",
+              "author": {
+                "self": "https://jiradc.ext.net.nokia.com/rest/api/2/user?username=aiwang",
+                "name": "aiwang",
+                "key": "aiwang",
+                "emailAddress": "aifen-monica.wang@nokia.com",
+                "avatarUrls": {
+                  "48x48": "https://jiradc.ext.net.nokia.com/secure/useravatar?avatarId=10472",
+                  "24x24": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=small&avatarId=10472",
+                  "16x16": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=xsmall&avatarId=10472",
+                  "32x32": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=medium&avatarId=10472"
+                },
+                "displayName": "Aifen-Monica Wang (Nokia)",
+                "active": true,
+                "timeZone": "Europe/Helsinki"
+              },
+              "body": "RL1 FOTL assigned due to load balance between Chengke and Kevin",
+              "updateAuthor": {
+                "self": "https://jiradc.ext.net.nokia.com/rest/api/2/user?username=aiwang",
+                "name": "aiwang",
+                "key": "aiwang",
+                "emailAddress": "aifen-monica.wang@nokia.com",
+                "avatarUrls": {
+                  "48x48": "https://jiradc.ext.net.nokia.com/secure/useravatar?avatarId=10472",
+                  "24x24": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=small&avatarId=10472",
+                  "16x16": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=xsmall&avatarId=10472",
+                  "32x32": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=medium&avatarId=10472"
+                },
+                "displayName": "Aifen-Monica Wang (Nokia)",
+                "active": true,
+                "timeZone": "Europe/Helsinki"
+              },
+              "created": "2025-10-23T11:23:59.000+0300",
+              "updated": "2025-10-23T11:23:59.000+0300"
+            }
+          ],
+          "maxResults": 1,
+          "total": 1,
+          "startAt": 0
+        },
+        "customfield_40668": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/270013",
+          "value": "Functional",
+          "id": "270013",
+          "disabled": false
+        },
+        "customfield_37381": "CB015880-SR",
+        "customfield_44005": "RL1 FOTL assigned due to load balance between Chengke and Kevin",
+        "customfield_40562": null,
+        "customfield_44001": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/271849",
+          "value": "To Be Determined ",
+          "id": "271849",
+          "disabled": false
+        },
+        "customfield_29090": null,
+        "customfield_38004": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/295499",
+          "value": "Major",
+          "id": "295499",
+          "disabled": false
+        },
+        "customfield_43390": "{summaryBean=com.atlassian.jira.plugin.devstatus.rest.SummaryBean@7d7f569a[summary={pullrequest=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@2f39337f[byInstanceType={},overall=PullRequestOverallBean{stateCount=0, state='OPEN', details=PullRequestOverallDetails{openCount=0, mergedCount=0, declinedCount=0}}], build=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@359751bf[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.BuildOverallBean@53533eb9[failedBuildCount=0,successfulBuildCount=0,unknownBuildCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], review=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@3e37a2a5[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.ReviewsOverallBean@54d1f351[dueDate=<null>,overDue=false,state=<null>,stateCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], deployment-environment=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@5b445add[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.DeploymentOverallBean@112801fa[showProjects=false,successfulCount=0,topEnvironments=[],count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], repository=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@1209bbf0[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.CommitOverallBean@4919999b[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], branch=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@30f2a0d7[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.BranchOverallBean@610440e2[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]]},configErrors=[],errors=[]], devSummaryJson={\"cachedValue\":{\"errors\":[],\"configErrors\":[],\"summary\":{\"pullrequest\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":\"OPEN\",\"details\":{\"openCount\":0,\"mergedCount\":0,\"declinedCount\":0,\"total\":0},\"open\":true},\"byInstanceType\":{}},\"build\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"failedBuildCount\":0,\"successfulBuildCount\":0,\"unknownBuildCount\":0},\"byInstanceType\":{}},\"review\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":null,\"dueDate\":null,\"overDue\":false,\"completed\":false},\"byInstanceType\":{}},\"deployment-environment\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"topEnvironments\":[],\"showProjects\":false,\"successfulCount\":0},\"byInstanceType\":{}},\"repository\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}},\"branch\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}}}},\"isStale\":false}}",
+        "customfield_38368": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/267117",
+          "value": "New Development",
+          "id": "267117",
+          "disabled": false
+        },
+        "fixVersions": [],
+        "customfield_10232": null,
+        "customfield_32017": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/192784",
+          "value": "unknown",
+          "id": "192784",
+          "disabled": false
+        },
+        "customfield_32026": "2025-10-23T11:23:59.000+0300",
+        "customfield_29895": null,
+        "customfield_37279": null,
+        "customfield_31290": null,
+        "customfield_37276": null,
+        "customfield_40553": null,
+        "customfield_40558": null,
+        "customfield_40556": null,
+        "customfield_47504": [
+          {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/312737",
+            "value": "N/A",
+            "id": "312737",
+            "disabled": false
+          }
+        ],
+        "customfield_38251": null,
+        "customfield_30407": null,
+        "customfield_30408": null,
+        "customfield_42992": 85.026042,
+        "customfield_40694": "0.0",
+        "customfield_40573": [
+          {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/226187",
+            "value": "1",
+            "id": "226187",
+            "disabled": false
+          }
+        ],
+        "customfield_42991": 100.0,
+        "customfield_40570": "None",
+        "customfield_47640": null,
+        "customfield_38256": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/295459",
+          "value": "AA: Analytics",
+          "id": "295459",
+          "disabled": true
+        },
+        "customfield_44490": null,
+        "customfield_38137": null,
+        "customfield_38259": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/296510",
+          "value": "Initial Effort Propagated",
+          "id": "296510",
+          "disabled": false
+        },
+        "customfield_38139": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/283882",
+          "value": "OTHER",
+          "id": "283882",
+          "disabled": false
+        },
+        "customfield_10222": null,
+        "customfield_30401": null,
+        "customfield_30402": null,
+        "customfield_37845": null,
+        "customfield_28690": null,
+        "timeestimate": null,
+        "versions": [],
+        "customfield_40565": null,
+        "customfield_40566": null,
+        "customfield_30092": null,
+        "customfield_40563": null,
+        "customfield_40564": null,
+        "customfield_40567": null,
+        "customfield_40568": null,
+        "status": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/status/18031",
+          "description": "It has been agreed to develop this feature in the given release with the given priority. R&D and I&V may spend effort on this backlog item.",
+          "iconUrl": "https://jiradc.ext.net.nokia.com/images/icons/statuses/generic.png",
+          "name": "Approved for Dev",
+          "id": "18031",
+          "statusCategory": {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "inprogress",
+            "name": "In Progress"
+          }
+        },
+        "customfield_38380": null,
+        "customfield_44024": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/271386",
+          "value": "Yellow: solution identified but not yet implemented",
+          "id": "271386",
+          "disabled": false
+        },
+        "customfield_44026": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/271400",
+          "value": "SPS",
+          "id": "271400",
+          "disabled": false
+        },
+        "customfield_38265": null,
+        "customfield_22790": "2|j0x8e8:",
+        "customfield_38387": null,
+        "customfield_43290": null,
+        "customfield_43291": null,
+        "customfield_43292": null,
+        "customfield_38700": [
+          {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/307410",
+            "value": "Classical",
+            "id": "307410",
+            "disabled": false
+          }
+        ],
+        "customfield_38701": null,
+        "customfield_38702": "CB015880-SR",
+        "customfield_38703": "AVENA related configs on ABIO/ABIP",
+        "archiveddate": null,
+        "customfield_29791": null,
+        "customfield_49390": null,
+        "customfield_25194": null,
+        "customfield_29790": null,
+        "aggregatetimeestimate": null,
+        "creator": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/user?username=fjira2",
+          "name": "fjira2",
+          "key": "fjira2",
+          "emailAddress": "dashboard.admin-miner@nokia.com",
+          "avatarUrls": {
+            "48x48": "https://jiradc.ext.net.nokia.com/secure/useravatar?avatarId=10472",
+            "24x24": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=small&avatarId=10472",
+            "16x16": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=xsmall&avatarId=10472",
+            "32x32": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=medium&avatarId=10472"
+          },
+          "displayName": "fjira user",
+          "active": true,
+          "timeZone": "Europe/Helsinki"
+        },
+        "customfield_11890": null,
+        "customfield_38399": null,
+        "customfield_42090": null,
+        "customfield_48990": null,
+        "customfield_37983": null,
+        "customfield_38710": "26R3-SR",
+        "aggregateprogress": {
+          "progress": 0,
+          "total": 0
+        },
+        "customfield_38711": "SITE SOLUTION \\ Connectivity & Configs",
+        "customfield_38712": "SiSo, Deployment & Configurations",
+        "customfield_37738": null,
+        "customfield_38713": "Customer Specific",
+        "customfield_38714": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/209616",
+          "value": "Yes",
+          "id": "209616",
+          "disabled": false
+        },
+        "customfield_38704": "Functional Description:\n\nThis feature supports end to end classical configuration for AVENA building on ABIP/ABIO with FDD LTE/NR and TDD LTE/NR.\nCommon module supporting ASIM.\nFH link rate per each duplex/RAT inside one radio supports: 10GE/25GE FH link rate.\nThis feature supports eCPRI RF split with RF unit can be connected to up to 2 capacity card same time within single logical SBTS as following scenarios:\n* One fiber(s) of RF unit connected to 1st capacity card ABIP with FDD LTE/NR 7-2a eCPRI BB processing\n* One dedicated fiber(s) of the same RF unit connected to 2nd capacity card ABIO with TDD LTE 7-2a eCPRI BB processing\n* Related Capacity PIU can be in the same half sub-rack (half-rack).\n\nThis feature is introducing RF split for FDD and TDD 7-2a mMIMO as first time.\n\n\nThis feature supports eCPRI mMIMO FDD+TDD RF split with 3 BBU. RF unit can be connected to up to 3 capacity card same time within single logical SBTS as following scenarios:\n* One fiber(s) of RF unit connected to 1st capacity card (ABIP) with FDD LTE/NR 7-2a eCPRI BB processing\n* One dedicated fiber(s) of the same RF unit connected to 2nd capacity card (ABIO) with TDD LTE 7-2a eCPRI BB processing\n* Dedicated fiber(s) of the same RF unit connected to 3rd capacity card (ABIP) with TDD NR 7-2e eCPRI BB processing\n* Related Capacity PIU can be in the same half sub-rack (half-rack).\n\n\n\nmMIMO’s remote distance is up to 30km.\n\n\nThis feature base on following BB cell set and baseband unit cell numbers:\n* FDD LTE mMIMO BB cell set on ABIP, with CB015905 ABIP NR/LTE FDD eCPRI mMIMO BB cell set\n* FDD NR mMIMO BB cell set on ABIP, with CB015905 ABIP NR/LTE FDD eCPRI mMIMO BB cell set\n* TDD LTE mMIMO BB cell set on ABIO, with CB015883:ABIO LTE TDD eCPRI mMIMO\n* TDD NR mMIMO BB cell set on ABIP, with CB014881 ABIP NR TDD Dual Boost BB cell set\n\nRF cell set:\n* RF family:Habrok TDD FDD Dual Band 32TRx radio (AVENA as lead)\n* RF supports 4xSFP28 or 2xSFP56 FH ports. In this feature, it supports only 10GE/25GE FH link rate.\n* One single RF supports different duplex/RAT/FH concurrent mode inside one radio:\n* FDD LTE: 7-2a mMIMO eCPRI\n* FDD NR: 7-2a mMIMO eCPRI\n* TDD LTE: 7-2a mMIMO eCPRI\n* TDD NR: Dual Boost mMIMO eCPRI\n\n* The different duplex/RAT supports on any of available RF FH ports. The different duplex/RAT supports on any of available RF FH ports. In this feature, one dedicated FH for FDD, one dedicated FH for TDD NR, one dedicated FH for TDD LTE 7-2a. FDD NR 7-2a eCPRI + FDD LTE 7-2a eCPRI sharing in one common fiber is supported, other shared FH fiber function is in separate feature.\n* RF cell set includes:\n*  *RF cell set #R-a1: FDD LTE mMIMO single carrier 10/20MHz with 4DL/1UL MIMO layers + TDD LTE mMIMO dual carriers 2x20MHz with 8DL/4UL layers (8DL8UL streams).* \n*  *RF cell set #R-b1: FDD LTE mMIMO single carrier 5/10MHz with 4DL/1UL MIMO layers + FDD NR mMIMO signle carrier 5/10MHz with 4DL-2UL MIMO layers (4DL-8UL streams) + TDD LTE mMIMO dual carriers 2x20MHz with 8DL/4UL layers (8DL8UL streams).* \n*  *RF cell set #R-c1: FDD NR mMIMO signle carrier 10/20MHz with 4DL-2UL MIMO layers (4DL-8UL streams) + TDD LTE mMIMO dual carriers 2x20MHz with 8DL/4UL layers (8DL8UL streams).* \n* RF cell set #R-d1: FDD LTE mMIMO single carrier 5/10MHz with 4DL/1UL MIMO layers + FDD NR mMIMO single carrier 5/10MHz with 4DL-2UL MIMO layers (4DL-8UL streams) + TDD LTE mMIMO single carrier 1x20MHz with 8DL/4UL layers (8DL8UL streams) + TDD NR Dual Boost 1x20MHz with 16DL/8UL layers 16Rx IRC.\n* RF cell set #R-e1: FDD NR mMIMO signle carrier 10/20MHz with 4DL-2UL MIMO layers (4DL-8UL streams) + TDD LTE mMIMO single carrier 1x20MHz with 8DL/4UL layers (8DL8UL streams) + TDD NR Dual Boost 1x20MHz with 16DL/8UL layers 16Rx IRC.\n\n\nThis feature supports configuration blocks:\n* Config F1: Configuration with up to 3 sectors AVENA ( with FDD LTE 1cc and TDD LTE 2cc concurrent mode), up to 4 sectors Osprey 32 radios ( 3 sectors 2cc or 4 sectors 1cc NR), and up to 3 FDD CPRI NR radios ( 1cc NR FDD) connecting to 2x ABIP + 1x ABIO.\n* Half of ABIO for TDD LTE with up to 6 TDLTE cells, one dedicated FH 10/25GE per AVENA connects to this ABIO.\n* ABIP #1 for FDD LTE with up to total 9 sub-sectors. One dedicated FH 10/25GE per AVENA connects to this ABIP .\n* ABIP #2 for TDD NR 7-2a and FDD NR CPRI concurrent mode.\n\n* Config F2: Configuration with up to 3 sectors AVENA ( with FDD LTE 1cc, FDD NR 1cc and TDD LTE 2cc concurrent mode), up to 4 sectors Osprey 32 radios ( 3 sectors 2cc or 4 sectors 1cc NR), and up to 3 FDD CPRI NR radios ( 1cc NR FDD) connecting to 2x ABIP + 1x ABIO.\n* Half of ABIO for TDD LTE with up to 6 TDLTE cells, one dedicated FH 10/25GE per AVENA connects to this ABIO.\n* ABIP #1 for FDD LTE/NR concurrent mode on ABIP, with up to total 9 sub-sectors for FDD LTE and 3 cells for FDD NR. One dedicated FH 10/25GE per AVENA connects to this ABIP .\n* ABIP #2 for TDD NR 7-2a and FDD NR CPRI concurrent mode.\n\n* Config F3: Configuration with up to 3 sectors AVENA ( with FDD NR 1cc and TDD LTE 2cc concurrent mode), up to 4 sectors Osprey 32 radios ( 3 sectors 2cc or 4 sectors 1cc NR), and up to 3 FDD CPRI NR radios ( 1cc NR FDD) connecting to 2x ABIP + 1x ABIO.\n* Half of ABIO for TDD LTE with up to 6 TDLTE cells, one dedicated FH 10/25GE per AVENA connects to this ABIO.\n* ABIP #1 for FDD NR. One dedicated FH 10/25GE per AVENA connects to this ABIP .\n* ABIP #2 for TDD NR 7-2a and FDD NR CPRI concurrent mode.\n\n* Config F4: Configuration with up to 3 sectors AVENA (with FDD NR 1cc, TDD LTE 1cc and TDD NR 1cc concurrent mode), up to 4 sectors Osprey 32 radios ( 3 sectors 2cc or 4 sectors 1cc NR), and up to 3 FDD CPRI NR radios ( 1cc NR FDD) connecting to 2x ABIP + 1x ABIO.\n* Half of ABIO for TDD LTE with up to 3 TDLTE cells, one dedicated FH 10/25GE per AVENA connects to this ABIO.\n* ABIP #1 for FDD NR and TDD NR Dual boost concurrent mode. Dedicated FH 10/25GE on AVENA connects to the ABIP for FDD NR, and dedicated FH 10/25GE on AVENA connects on the ABIP for TDD NR Dual boost.\n* ABIP #2 for TDD NR 7-2a and FDD NR CPRI concurrent mode.\n\n* Config F5: Configuration with up to 3 sectors AVENA ( with FDD LTE1cc, FDD NR 1cc, TDD LTE 1cc and TDD NR 1cc concurrent mode), up to 4 sectors Osprey 32 radios ( 3 sectors 2cc or 4 sectors 1cc NR), and up to 3 FDD CPRI NR radios ( 1cc NR FDD) connecting to 2xASIM with 3x ABIP + 1x ABIO in one full rack single SBTS.\n* Half of ABIO for TDD LTE with up to 6 TDLTE cells, one dedicated FH 10/25GE per AVENA connects to this ABIO.\n* ABIP #1 for FDD LTE and FDD NR concurrent mode, with up to total 9 sub-sectors for FDD LTE and 3 cells for FDD NR. One FH 10/25GE on AVENA connects to the ABIP for FDD NR/LTE.\n* ABIP #2 for TDD NR dual boost fro all AVENA. One dedicated FH 10/25GE per AVENA connects to the ABIP.\n* ABIP #3 for TDD NR 7-2a and FDD NR CPRI concurrent mode.\n\n* Any of the RF FH ports can be used for the different RAT/Duplex. ABIO use port 1..6 or 7..9. ABIP can use any of port 1..12. Full board resource is used for cell allocation on ABIO if there is no concurrent BB boardconfigtype configured on ABIO.\n\nInternal Information:\n\nAVENA has following Duplex/RAT/FH planning inside one radio:\n* FDD LTE: 7-2a mMIMO NCY\n* FDD NR: 7-2a mMIMO NCY\n* TDD LTE: 7-2a mMIMO NCY\n* TDD NR: Dual Boost mMIMO NCY\n\nSo, for RF split, and FH, it needs to consider NCY Mplane.\n\n\n2025-12-08 Jin Sufen: Combine CB015881 and CB015880 to CB015880, FS2 rollback to FS1 for CB015880 with updated config:CB015880 mMIMO configs for Dual band radio with FDD NRLTE and TDD NRLTE - v4.pptx",
+        "customfield_37746": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/203122",
+          "value": "No",
+          "id": "203122",
+          "disabled": false
+        },
+        "customfield_38705": "FS3 Approved",
+        "customfield_48191": "https://dn-prod.ext.net.nokia.com/rm/resources/TX_uyMJ4JWqEfC7Wp-sWxcfJw?oslc_config.context=https://dn-prod.ext.net.nokia.com/rm/cm/stream/_rqvsxnE9Ee2P7JvPpgh-Sw",
+        "customfield_38706": "4G ; 5G",
+        "customfield_38707": "ASIM_Supported in System Release ; ABIO_Supported in System Release ; ABIP_Supported in System Release",
+        "customfield_38708": "Others",
+        "customfield_38709": "Sufen Jin (Nokia)",
+        "customfield_30790": null,
+        "customfield_37068": null,
+        "customfield_37062": null,
+        "timespent": null,
+        "customfield_38167": "Solution Idea:\r\nChallenges:\r\nDependencies to other FR?\r\n",
+        "customfield_39499": null,
+        "customfield_38720": null,
+        "customfield_22093": null,
+        "customfield_38721": null,
+        "customfield_38722": null,
+        "aggregatetimespent": null,
+        "customfield_38723": "3.0PD",
+        "customfield_38724": [
+          {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/337031",
+            "value": "26R3",
+            "id": "337031",
+            "disabled": false
+          }
+        ],
+        "customfield_38725": null,
+        "customfield_43190": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/282710",
+          "value": "FS1TA needed",
+          "id": "282710",
+          "disabled": false
+        },
+        "customfield_10786": null,
+        "customfield_38715": "https://focalpoint-prod.ext.net.nokia.com/fp/workspace/1314/element/131707",
+        "customfield_38716": 44114.0,
+        "customfield_29690": null,
+        "customfield_38717": null,
+        "customfield_38718": null,
+        "customfield_38719": null,
+        "customfield_37752": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/203350",
+          "value": "No",
+          "id": "203350",
+          "disabled": false
+        },
+        "customfield_32060": "0.0",
+        "workratio": -1,
+        "customfield_37195": null,
+        "customfield_31090": null,
+        "customfield_48899": null,
+        "customfield_48897": null,
+        "customfield_38295": null,
+        "customfield_40490": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/225910",
+          "value": "Support Request",
+          "id": "225910",
+          "disabled": false
+        },
+        "customfield_48898": null,
+        "customfield_48895": 2602.0,
+        "customfield_38055": null,
+        "customfield_40496": null,
+        "customfield_48896": null,
+        "customfield_38298": null,
+        "customfield_40493": null,
+        "customfield_48893": 2614.0,
+        "created": "2025-09-20T01:22:45.000+0300",
+        "customfield_48894": 2601.0,
+        "customfield_48892": 2611.0,
+        "customfield_23292": null,
+        "customfield_11990": null,
+        "customfield_38735": null,
+        "customfield_38736": null,
+        "customfield_26193": null,
+        "customfield_37889": null,
+        "customfield_38726": null,
+        "customfield_51490": null,
+        "customfield_26192": null,
+        "customfield_38727": "A) Update Version:\r\n[26.3.30]<Kevin Wang>:\r\n\r\nB) Feature status\r\n    FOT kicked off.\r\n\r\nGeneral feature status:\r\n• CFAM:\r\n    CP/CP2 approved.\r\n  \r\n• Plan/ Development status:\r\n      All plans have been ready and RFCed.\r\n      FTS HL is done.\r\n      Development is ongoing\r\n\r\nC) Risk Status and Management\r\n• risk in time:\r\n      N/A\r\n\r\n• risk mitigation plan or action plan in place?\r\n      N/A\r\n \r\n• What help is needed from (program) management?\r\n     N/A\r\n\r\nD) Feature Blocking Prontos:\r\n     N/A ",
+        "customfield_38728": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/210534",
+          "value": "Committed at P2",
+          "id": "210534",
+          "disabled": false
+        },
+        "customfield_38729": null,
+        "customfield_51491": null,
+        "customfield_32196": "2025-10-23T11:23:59.000+0300",
+        "customfield_32195": null,
+        "customfield_30690": null,
+        "customfield_41592": [
+          {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/229520",
+            "value": "Radio",
+            "id": "229520",
+            "disabled": false
+          }
+        ],
+        "customfield_43892": null,
+        "customfield_46128": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/294811",
+          "value": "Green",
+          "id": "294811",
+          "disabled": false
+        },
+        "customfield_43890": null,
+        "customfield_41593": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/318810",
+          "value": "FDD mMIMO",
+          "id": "318810",
+          "disabled": false
+        },
+        "customfield_43891": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/user?username=fulawka",
+          "name": "fulawka",
+          "key": "fulawka",
+          "emailAddress": "konrad.fulawka@nokia.com",
+          "avatarUrls": {
+            "48x48": "https://jiradc.ext.net.nokia.com/secure/useravatar?avatarId=10472",
+            "24x24": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=small&avatarId=10472",
+            "16x16": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=xsmall&avatarId=10472",
+            "32x32": "https://jiradc.ext.net.nokia.com/secure/useravatar?size=medium&avatarId=10472"
+          },
+          "displayName": "Konrad Fulawka (Nokia)",
+          "active": true,
+          "timeZone": "Europe/Helsinki"
+        },
+        "customfield_38740": null,
+        "customfield_43092": 0.0,
+        "customfield_38741": null,
+        "customfield_38742": null,
+        "customfield_38743": null,
+        "customfield_38744": null,
+        "customfield_38745": null,
+        "customfield_38746": null,
+        "customfield_43090": 4490.0,
+        "customfield_45390": "",
+        "customfield_37648": null,
+        "customfield_38505": "nokia.com",
+        "customfield_38747": null,
+        "customfield_43091": 3635.0,
+        "customfield_38737": null,
+        "customfield_50191": null,
+        "customfield_37657": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/170627",
+          "value": "No",
+          "id": "170627",
+          "disabled": true
+        },
+        "customfield_38738": null,
+        "customfield_50192": null,
+        "customfield_37898": [
+          "aiwang(aiwang)",
+          "fjira2(fjira2)",
+          "kewang(kewang)"
+        ],
+        "customfield_38739": null,
+        "attachment": [],
+        "customfield_40499": null,
+        "customfield_40497": null,
+        "customfield_39390": null,
+        "customfield_38195": null,
+        "customfield_38990": null,
+        "customfield_46132": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/294821",
+          "value": "No",
+          "id": "294821",
+          "disabled": false
+        },
+        "customfield_38199": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/239361",
+          "value": "Operation Documentation",
+          "id": "239361",
+          "disabled": false,
+          "child": {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/239362",
+            "value": "Operating Documentation ",
+            "id": "239362",
+            "disabled": false
+          }
+        },
+        "customfield_38078": null,
+        "customfield_44990": "pre-condition of own feature: CB014881, CB015883, CB014309, CB014308, CB015907, CB008577, CB014124, CB015748, CB015905, CB015996, CB009472; pre-condition for other features: CB016059, CB016529",
+        "customfield_38750": null,
+        "customfield_38751": null,
+        "customfield_38752": null,
+        "customfield_46131": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/294819",
+          "value": "New Lab Request/Capability",
+          "id": "294819",
+          "disabled": false
+        },
+        "customfield_48790": null,
+        "customfield_38754": null,
+        "customfield_46130": {
+          "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/294814",
+          "value": "Defect",
+          "id": "294814",
+          "disabled": false
+        },
+        "customfield_38755": null,
+        "customfield_38756": null,
+        "customfield_37419": [
+          {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/294503",
+            "value": "Others",
+            "id": "294503",
+            "disabled": false
+          }
+        ],
+        "customfield_38757": null,
+        "customfield_38758": null,
+        "customfield_37417": [
+          {
+            "self": "https://jiradc.ext.net.nokia.com/rest/api/2/customFieldOption/348610",
+            "value": "Classical",
+            "id": "348610",
+            "disabled": false
+          }
+        ],
+        "customfield_38748": null,
+        "customfield_38749": null,
+        "customfield_10758": null,
+        "customfield_37421": null,
+        "customfield_37784": "As customer, we want to deploy up to 3 sectors AVENA with FDD LTE/NR and TDD NR/LTE on ABIP + ABIO., As customer, we want to deploy up to 3 sectors AVENA with FDD NR and TDD NR/LTE on ABIP + ABIO., As customer, we want to deploy configuration by one ABIO and one ABIP with 2 sectors AVENA + other radios in one SBTS, As customer, we want to deploy AVENA and other TDD/FDD radios on the same SBTS with different combination based on supported BB cell set and RF cell sets., As customer, we want to deploy up to 3 sectors AVENA with FDD LTE and TDD LTE on ABIP + ABIO., As customer, we want to deploy up to 3 sectors AVENA with FDD LTE/NR and TDD LTE on ABIP + ABIO., As customer, we want to deploy up to 3 sectors AVENA with FDD NR and TDD LTE on ABIP + ABIO.",
+        "customfield_46129": null
+      }
+    }
+  ]
+}

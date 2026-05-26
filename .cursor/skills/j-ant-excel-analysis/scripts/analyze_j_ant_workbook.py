@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-J-Ant .xlsm helpers: Healthy/Late, End FB vs Target FB, empty End FB, FOT (-Z),
-delayed (End FB > RC FB), End FB with open or committed FB Committed Status, no-RFC rows (End FB < Target FB, not Ready for Commitment), with Jira Key URLs.
+J-Ant .xlsm helpers: Healthy/Late, End FB vs Target FB, empty End FB, plan deviation
+(empty End FB or End FB > Target FB), FOT (-Z), delayed (End FB > RC FB; Status not Done/Obsolete),
+End FB with open or committed FB Committed Status, no-RFC rows, with Jira Key URLs.
 Requires: pip install openpyxl
 """
 
@@ -272,6 +273,90 @@ def emit_no_rfc_end_before_target_markdown(
         )
 
 
+def emit_plan_deviation_markdown(
+    rows: list[dict],
+    *,
+    sheet: str,
+    feature: str | None,
+) -> None:
+    parts = [
+        f"**Sheet:** {sheet}",
+        "**Filter:** Plan deviation - **End FB** empty (blank / placeholder) **or** numeric **End FB** > numeric **Target FB**; Type = Competence area; non-empty **Key**; **Status** not Done / Obsolete",
+    ]
+    if feature:
+        parts.append(f"**Scope:** Summary or Key contains `{feature}`")
+    print("\n\n".join(parts))
+    print()
+    print(
+        "| Key | Summary | Status | Competence Area | Assignee | Start FB | End FB | Target FB | Risk Status | Release committed status |"
+    )
+    print("| --- | --- | --- | --- | --- | ---: | ---: | ---: | --- | --- |")
+    for rec in rows:
+        print(
+            "| "
+            + format_key_markdown(rec)
+            + " | "
+            + md_escape_cell(rec.get("summary"))
+            + " | "
+            + md_escape_cell(rec.get("status"))
+            + " | "
+            + md_escape_cell(rec.get("competence_area"))
+            + " | "
+            + md_escape_cell(rec.get("assignee"))
+            + " | "
+            + md_escape_cell(rec.get("start_fb"))
+            + " | "
+            + md_escape_cell(rec.get("end_fb"))
+            + " | "
+            + md_escape_cell(rec.get("target_fb"))
+            + " | "
+            + md_escape_cell(rec.get("risk_status"))
+            + " | "
+            + md_escape_cell(rec.get("rel_committed_status"))
+            + " |"
+        )
+
+
+def emit_delayed_rc_fb_markdown(
+    rows: list[dict],
+    *,
+    sheet: str,
+    feature: str | None,
+) -> None:
+    parts = [
+        f"**Sheet:** {sheet}",
+        "**Filter:** Delayed - numeric **End FB** > numeric **RC FB** (Release committed FB); Type = Competence area; **Status** not Done / Obsolete",
+    ]
+    if feature:
+        parts.append(f"**Scope:** Summary or Key contains `{feature}`")
+    else:
+        parts.append("**Scope:** All competence-area rows on sheet (no `--feature` filter)")
+    print("\n\n".join(parts))
+    print()
+    print(
+        "| Key | Summary | Status | Competence Area | Release committed FB (RC FB) | End FB | Delay Explanation |"
+    )
+    print("| --- | --- | --- | --- | ---: | ---: | --- |")
+    for rec in rows:
+        print(
+            "| "
+            + format_key_markdown(rec)
+            + " | "
+            + md_escape_cell(rec.get("summary"))
+            + " | "
+            + md_escape_cell(rec.get("status"))
+            + " | "
+            + md_escape_cell(rec.get("competence_area"))
+            + " | "
+            + md_escape_cell(rec.get("release_committed_fb"))
+            + " | "
+            + md_escape_cell(rec.get("end_fb"))
+            + " | "
+            + md_escape_cell(rec.get("delay_explanation"))
+            + " |"
+        )
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--workbook", type=Path, required=True)
@@ -284,6 +369,7 @@ def main() -> int:
             "healthy-late-exact",
             "end-after-target",
             "empty-end-fb",
+            "plan-deviation",
             "delayed-rc-fb",
             "end-fb-not-committed",
             "end-fb-committed",
@@ -296,7 +382,7 @@ def main() -> int:
         "--feature",
         type=str,
         default=None,
-        help="Substring in Summary (fot, delayed-rc-fb) or Summary/Key (end-fb-*, no-rfc-end-before-target), e.g. CB013987 or CB015871",
+        help="Substring in Summary (fot) or Summary/Key (delayed-rc-fb, end-fb-*, no-rfc-end-before-target, plan-deviation). Required for fot and no-rfc-end-before-target; optional for delayed-rc-fb (omit for all competence-area rows), plan-deviation, end-fb-not-committed, end-fb-committed.",
     )
     ap.add_argument(
         "--fot-contact",
@@ -319,7 +405,7 @@ def main() -> int:
         "--format",
         choices=("json", "markdown"),
         default="json",
-        help="json (default) or markdown table (end-fb-not-committed, end-fb-committed, no-rfc-end-before-target)",
+        help="json (default) or markdown table (delayed-rc-fb, end-fb-not-committed, end-fb-committed, no-rfc-end-before-target, plan-deviation)",
     )
     args = ap.parse_args()
 
@@ -418,20 +504,58 @@ def main() -> int:
                 continue
             if not g(i_key):
                 continue
-        elif args.filter == "delayed-rc-fb":
-            if not args.feature:
-                sys.stderr.write("--feature required for delayed-rc-fb filter.\n")
-                wb.close()
-                return 1
-            if None in (i_type, i_sum, i_comp, i_key, i_end, i_rc):
-                sys.stderr.write("delayed-rc-fb needs Type, Summary, Competence Area, Key, End FB, RC FB.\n")
+        elif args.filter == "plan-deviation":
+            if None in (i_type, i_end, i_tgt, i_key, i_stat):
+                sys.stderr.write(
+                    "plan-deviation needs Type, End FB, Target FB, Key, and Status columns.\n"
+                )
                 wb.close()
                 return 1
             if norm(g(i_type)) != "competence area":
                 continue
-            summ = g(i_sum)
-            if not summ or args.feature.lower() not in str(summ).lower():
+            if not g(i_key):
                 continue
+            st = g(i_stat)
+            if st is not None and str(st).strip():
+                sn = norm(st)
+                if sn == "done" or sn == "obsolete":
+                    continue
+            if args.feature:
+                summ_s = str(g(i_sum) or "") if i_sum is not None else ""
+                key_s = str(key_val or "")
+                needle = args.feature.lower()
+                if needle not in summ_s.lower() and needle not in key_s.lower():
+                    continue
+            ev = g(i_end)
+            dev = is_empty_end(ev)
+            if not dev:
+                end = num(ev)
+                tgt = num(g(i_tgt))
+                dev = end is not None and tgt is not None and end > tgt
+            if not dev:
+                continue
+        elif args.filter == "delayed-rc-fb":
+            if None in (i_type, i_sum, i_comp, i_key, i_end, i_rc, i_stat):
+                sys.stderr.write(
+                    "delayed-rc-fb needs Type, Summary, Competence Area, Key, End FB, RC FB, and Status columns.\n"
+                )
+                wb.close()
+                return 1
+            if norm(g(i_type)) != "competence area":
+                continue
+            if not g(i_key):
+                continue
+            if args.feature:
+                summ_s = str(g(i_sum) or "") if i_sum is not None else ""
+                key_s = str(key_val or "")
+                needle = args.feature.lower()
+                if needle not in summ_s.lower() and needle not in key_s.lower():
+                    continue
+            st = g(i_stat)
+            if st is not None and str(st).strip():
+                sn = norm(st)
+                if sn == "done" or sn == "obsolete":
+                    continue
             end = num(g(i_end))
             rc = num(g(i_rc))
             if end is None or rc is None or end <= rc:
@@ -571,6 +695,11 @@ def main() -> int:
 
     wb.close()
     if args.format == "markdown":
+        if args.filter == "delayed-rc-fb":
+            emit_delayed_rc_fb_markdown(
+                rows_out, sheet=args.sheet, feature=args.feature
+            )
+            return 0
         if args.filter == "no-rfc-end-before-target":
             if not args.feature:
                 sys.stderr.write("--feature required with --format markdown for no-rfc-end-before-target.\n")
@@ -579,10 +708,15 @@ def main() -> int:
                 rows_out, sheet=args.sheet, feature=args.feature
             )
             return 0
+        if args.filter == "plan-deviation":
+            emit_plan_deviation_markdown(
+                rows_out, sheet=args.sheet, feature=args.feature
+            )
+            return 0
         if args.filter not in ("end-fb-not-committed", "end-fb-committed"):
             sys.stderr.write(
-                "--format markdown is only supported for --filter end-fb-not-committed, "
-                "end-fb-committed, or no-rfc-end-before-target.\n"
+                "--format markdown is only supported for --filter delayed-rc-fb, "
+                "end-fb-not-committed, end-fb-committed, no-rfc-end-before-target, or plan-deviation.\n"
             )
             return 1
         emit_end_fb_commitment_markdown(

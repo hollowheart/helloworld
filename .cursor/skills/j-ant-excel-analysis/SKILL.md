@@ -3,17 +3,17 @@ name: j-ant-excel-analysis
 description: >-
   Reads Nokia J-Ant planning workbooks (.xlsm), uses the Gantt Chart tab to
   filter rows by Healthy (substring or exact Late), by End FB vs Target FB, by
-  empty End FB, plan deviation (CLI `--filter plan-deviation`: competence area, empty End FB or End FB > Target FB, Status not Done/Obsolete; optional `--feature`; markdown ten columns including Status and Rel Committed Status as Release committed status), by delayed End FB vs RC FB (CLI `delayed-rc-fb`; optional `--feature` on Summary/Key; Status not Done/Obsolete; markdown seven columns), by FOT
+  empty End FB, plan deviation (CLI `--filter plan-deviation`: competence area, empty End FB or End FB > Target FB, Status not Done/Obsolete; optional `--feature`; markdown ten columns including Status and Rel Committed Status as Release committed status), by delayed End FB vs RC FB (CLI `delayed-rc-fb`; optional `--feature` on Summary/Key; Status not Done/Obsolete; markdown eight columns including Assignee), by FOT
   nomination (Contact Person on CB*-SR-Z competence rows), not-committed
   competence-area rows at a given End FB (FB Committed Status open; user must
   supply End FB YYWW—no default), committed competence-area rows at a given End FB (FB Committed Status non-open),
   no-RFC competence-area rows (Status not Done/Obsolete, End FB <= Target FB, Rel Committed Status empty or not committed; CLI filter no-rfc-end-before-target),
   and exports Key (with Jira hyperlink URL when present), Competence
   Area, Assignee, Contact Person, Summary, FB dates, Status, Activity Type,
-  Risk Status, Stretch Goal Reason, Rel Committed Status (markdown label **Release committed status** on Gantt for filter 9 and **plan-deviation**), and related columns. Use when the user mentions J-Ant, J-Ant_Latest, Gantt
+  Risk Status, Stretch Goal Reason, Rel Committed Status (markdown label **Release committed status** on Gantt for filter 9 and **plan-deviation**), and related columns. **Bundle .xlsx export:** `export_j_ant_cb_status_to_xlsx.py` builds one workbook (filename includes date), one worksheet per `--features` token, with four stacked tables (delayed-rc-fb, plan-deviation, no-rfc-end-before-target, end-fb-not-committed at `--end-fb`). Use when the user mentions J-Ant, J-Ant_Latest, Gantt
   Chart, FOT members, Contact Person, Key hyperlinks, Healthy/Late, empty End
   FB, Start FB, End FB, Target FB, plan deviation, plan slip, delayed items, End FB after release committed
-  (RC FB), not committed, committed at End FB, no RFC, Rel Committed Status, release committed status, FB Committed Status, CNI- or CB0 feature tokens, or macro workbooks under Projects/Tools (e.g. CB015871, CB015362,
+  (RC FB), not committed, committed at End FB, no RFC, Rel Committed Status, release committed status, FB Committed Status, multi-sheet Excel export, daily status report, CNI- or CB0 feature tokens, or macro workbooks under Projects/Tools (e.g. CB015871, CB015362,
   CB015872-SR, CB013987, CNI-165443, CB014655).
 ---
 
@@ -23,7 +23,7 @@ description: >-
 
 Analyze the **J-Ant** macro-enabled workbook (typically `J-Ant_Latest*.xlsm`) the same way as in the established workflow: locate the data table on **Gantt Chart**, apply filters, and report rows with the standard Jira/planning columns plus useful extras. Whenever a **Key** (e.g. `FPB-1604330`) is shown, include the **Jira URL** from the cell hyperlink as a markdown link `[KEY](url)` when `cell.hyperlink.target` is present.
 
-**Automation:** `.cursor/skills/j-ant-excel-analysis/scripts/analyze_j_ant_workbook.py` implements the CLI filters in **Filters** below (including **`plan-deviation`**, **`no-rfc-end-before-target`**, **`end-fb-not-committed`**, **`end-fb-committed`**, **`delayed-rc-fb`**, **`fot`**, etc.).
+**Automation:** `.cursor/skills/j-ant-excel-analysis/scripts/analyze_j_ant_workbook.py` implements the CLI filters in **Filters** below (including **`plan-deviation`**, **`no-rfc-end-before-target`**, **`end-fb-not-committed`**, **`end-fb-committed`**, **`delayed-rc-fb`**, **`fot`**, etc.). **`export_j_ant_cb_status_to_xlsx.py`** (same folder) runs those filters per feature token and writes one **.xlsx** workbook—see **Multi-sheet Excel export** below.
 
 ## Default workbook path (adjust if the user names another file)
 
@@ -140,15 +140,16 @@ Use when the user asks for **plan deviation**, **plan slip**, **slip**, or the u
    2. **Summary**  
    3. **Status**  
    4. **Competence Area**  
-   5. **Release committed FB (RC FB)** — show the **RC FB** cell value; label the column clearly for the reader.  
-   6. **End FB** — **always** include next to RC FB so the slip is obvious.  
-   7. **Delay Explanation** — **Delay Explanation** column on **Gantt Chart** (on **JiraData** the header may be **Delay Explanations** plural—map case-insensitively if reading that sheet).
+   5. **Assignee**  
+   6. **Release committed FB (RC FB)** — show the **RC FB** cell value; label the column clearly for the reader.  
+   7. **End FB** — **always** include next to RC FB so the slip is obvious.  
+   8. **Delay Explanation** — **Delay Explanation** column on **Gantt Chart** (on **JiraData** the header may be **Delay Explanations** plural—map case-insensitively if reading that sheet).
 
    **Markdown preamble** (align with script): **Sheet**; **Filter** line stating End FB > RC FB, **Type** = competence area, **Status** not Done/Obsolete; **Scope:** either “Summary or Key contains …” when **`--feature`** is set, or all competence-area rows when **`--feature`** is omitted.
 
-   **Optional:** **Excel row** number. Add **Target FB**, **Healthy**, **Assignee** only if the user asks.
+   **Optional:** **Excel row** number. Add **Target FB**, **Healthy** only if the user asks.
 
-   **CLI:** `python …/analyze_j_ant_workbook.py --workbook PATH.xlsm --filter delayed-rc-fb` (all delayed rows, JSON default). Add **`--feature CB013987`** to narrow; add **`--format markdown`** for the seven-column table above.
+   **CLI:** `python …/analyze_j_ant_workbook.py --workbook PATH.xlsm --filter delayed-rc-fb` (all delayed rows, JSON default). Add **`--feature CB013987`** to narrow; add **`--format markdown`** for the eight-column table above.
 
    **Compared to filter 9 (no RFC):** Delayed uses numeric **RC FB** and **End FB** > **RC FB**; no RFC uses **Rel Committed Status** text and **End FB <= Target FB** — different gates (see filter 9).
 
@@ -178,7 +179,7 @@ Use when the user asks for **plan deviation**, **plan slip**, **slip**, or the u
 
    **Markdown report (`--format markdown`)**  
    - **Preamble:** **Sheet** name; **Filter** line listing **End FB** value, FB Committed rule, and **Type = Competence area**; if `--feature` is set, add **Scope:** Summary or Key contains the token.  
-   - **Table column order:** **Key** (`[KEY](url)` from `cell.hyperlink.target` when present, else plain Key), **Summary**, **Competence Area**, **End FB**, **Release committed FB (RC FB)** (values from **RC FB**), **Risk Status**, **Stretch Goal Reason**.  
+   - **Table column order:** **Key** (`[KEY](url)` from `cell.hyperlink.target` when present, else plain Key), **Summary**, **Competence Area**, **Assignee**, **End FB**, **Release committed FB (RC FB)** (values from **RC FB**), **Risk Status**, **Stretch Goal Reason**.  
    - **Risk Status:** header must match **risk** and **status** in the normalized column name.  
    - **Stretch Goal Reason:** header must match **stretch**, **goal**, and **reason**. Many workbooks have no such column on **Gantt Chart** — then markdown cells and JSON omit or leave those fields empty.
 
@@ -203,7 +204,7 @@ Use when the user asks for **plan deviation**, **plan slip**, **slip**, or the u
    Include a row only when **FB Committed Status** is **not** “open” under the same rules as filter 7: exclude blank/whitespace-only, placeholders (`N/A`, `-`, `none`, `missing`), and any value whose normalized text contains **not committed**. Typical included values are **Committed** (and similar substantive statuses).
 
    **Markdown (`--format markdown`)**  
-   Same preamble pattern as filter 7; **Filter** line states **committed (non-open)**. Table columns: **Key**, **Summary**, **Competence Area**, **End FB**, **FB Committed Status**, **Release committed FB (RC FB)**, **Risk Status**, **Stretch Goal Reason**.
+   Same preamble pattern as filter 7; **Filter** line states **committed (non-open)**. Table columns: **Key**, **Summary**, **Competence Area**, **Assignee**, **End FB**, **FB Committed Status**, **Release committed FB (RC FB)**, **Risk Status**, **Stretch Goal Reason**.
 
    **CLI**  
    `python …/analyze_j_ant_workbook.py --workbook PATH.xlsm --filter end-fb-committed --end-fb 2611 --feature CB014655 --format markdown`
@@ -243,7 +244,8 @@ Use when the user asks for **plan deviation**, **plan slip**, **slip**, or the u
 
 ## Output
 
-- Prefer **markdown tables** for the primary columns (**Key** as `[KEY](url)` when `cell.hyperlink.target` exists, else plain Key; plus Competence Area, Assignee, Contact Person when relevant, Summary, FB fields, Status, Activity Type). For **delayed vs RC FB** (filter 6) with `--format markdown`, use the seven-column layout in filter 6 (**Key**, **Summary**, **Status**, **Competence Area**, **Release committed FB (RC FB)**, **End FB**, **Delay Explanation**). For **not committed** (filter 7) with `--format markdown`, use the seven-column layout in filter 7 (**Key** through **Stretch Goal Reason**). For **committed at End FB** (filter 8) with `--format markdown`, use the eight-column layout in filter 8 (adds **FB Committed Status** before **Release committed FB (RC FB)**). For **no RFC** (filter 9) with `--format markdown`, use the eight-column layout in filter 9 (**Key**, **Summary**, **Status**, **Competence Area**, **Assignee**, **End FB**, **Target FB**, **Release committed status**). For **plan deviation** with `--format markdown`, use the ten-column layout under **Plan deviation** (**Key**, **Summary**, **Status**, **Competence Area**, **Assignee**, **Start FB**, **End FB**, **Target FB**, **Risk Status**, **Release committed status**). Apply the same **Key**+hyperlink convention for **Healthy**, **End FB**, **empty End FB**, and **FOT** results—not only FOT. Add a second table or JSON when the user wants wide “etc.” columns.
+- Prefer **markdown tables** for the primary columns (**Key** as `[KEY](url)` when `cell.hyperlink.target` exists, else plain Key; plus Competence Area, Assignee, Contact Person when relevant, Summary, FB fields, Status, Activity Type). For **delayed vs RC FB** (filter 6) with `--format markdown`, use the eight-column layout in filter 6 (**Key**, **Summary**, **Status**, **Competence Area**, **Assignee**, **Release committed FB (RC FB)**, **End FB**, **Delay Explanation**). For **not committed** (filter 7) with `--format markdown`, use the eight-column layout (**Key**, **Summary**, **Competence Area**, **Assignee**, **End FB**, **Release committed FB (RC FB)**, **Risk Status**, **Stretch Goal Reason**). For **committed at End FB** (filter 8) with `--format markdown`, use the nine-column layout (**Key**, **Summary**, **Competence Area**, **Assignee**, **End FB**, **FB Committed Status**, **Release committed FB (RC FB)**, **Risk Status**, **Stretch Goal Reason**). For **no RFC** (filter 9) with `--format markdown`, use the eight-column layout in filter 9 (**Key**, **Summary**, **Status**, **Competence Area**, **Assignee**, **End FB**, **Target FB**, **Release committed status**). For **plan deviation** with `--format markdown`, use the ten-column layout under **Plan deviation** (**Key**, **Summary**, **Status**, **Competence Area**, **Assignee**, **Start FB**, **End FB**, **Target FB**, **Risk Status**, **Release committed status**). Apply the same **Key**+hyperlink convention for **Healthy**, **End FB**, **empty End FB**, and **FOT** results—not only FOT. Add a second table or JSON when the user wants wide “etc.” columns.
+- For **one dated `.xlsx`** with **one worksheet per `--features` token** and stacked tables for **delayed**, **plan deviation**, **no RFC**, and **not committed at `--end-fb`**, use **`export_j_ant_cb_status_to_xlsx.py`** (see **Multi-sheet Excel export**).
 - Include **Excel row number** (1-based sheet row) when it helps the user find the row in Excel.  
 - State **sheet name**, **filter rule**, and **row count** in a short preamble.
 
@@ -270,11 +272,44 @@ python .cursor/skills/j-ant-excel-analysis/scripts/analyze_j_ant_workbook.py --w
 python .cursor/skills/j-ant-excel-analysis/scripts/analyze_j_ant_workbook.py --workbook "PATH.xlsm" --filter end-fb-not-committed --feature CNI-165443 --end-fb 2611
 python .cursor/skills/j-ant-excel-analysis/scripts/analyze_j_ant_workbook.py --workbook "PATH.xlsm" --filter end-fb-committed --end-fb 2611 --feature CB014655 --format markdown
 python .cursor/skills/j-ant-excel-analysis/scripts/analyze_j_ant_workbook.py --workbook "PATH.xlsm" --filter no-rfc-end-before-target --feature CB015871 --format markdown
+python .cursor/skills/j-ant-excel-analysis/scripts/export_j_ant_cb_status_to_xlsx.py
 ```
 
 `--fot-contact` is one of `provided`, `missing`, or `both` (default `both`). `--feature` is required for `fot` and **`no-rfc-end-before-target`**; **optional** for **`delayed-rc-fb`** (omit for all competence-area delayed rows on the sheet), **`plan-deviation`**, `end-fb-not-committed`, and `end-fb-committed` (substring match on **Summary** or **Key** for those filters). For **`end-fb-not-committed`** and **`end-fb-committed`**, **`--end-fb` is required** (the script exits if omitted). In chat, if the user did not state an End FB, **stop and ask** (filters 7–8)—never run these filters without **`--end-fb`**. `--format markdown` is implemented for **`delayed-rc-fb`**, **`end-fb-not-committed`**, **`end-fb-committed`**, **`no-rfc-end-before-target`**, and **`plan-deviation`**; default **`--format json`** prints the full row payload. Use `--copy-to ./_j_ant_copy.xlsm` when direct read fails.
 
+## Multi-sheet Excel export (CB / daily status)
+
+Use **`.cursor/skills/j-ant-excel-analysis/scripts/export_j_ant_cb_status_to_xlsx.py`** when the user wants **one Excel file** that combines **delayed**, **plan deviation**, **no RFC**, and **not committed at a given End FB** for **multiple feature tokens**, with **one worksheet per token** (sheet names are sanitized for Excel’s 31-character limit and invalid characters).
+
+**Behavior**
+
+- For each value in **`--features`**, the script subprocess-invokes **`analyze_j_ant_workbook.py`** four times with **`--format json`**: **`delayed-rc-fb`**, **`plan-deviation`**, **`no-rfc-end-before-target`**, **`end-fb-not-committed`** (the last uses **`--end-fb`**).
+- Each worksheet has a scope line, then **four labeled blocks** (section title + header row + data). **Key** cells get an Excel **hyperlink** when `key_url` is present in the JSON (same source as the analyzer).
+- **`--copy-to`:** If omitted, the export script passes a path under the **system temp** directory to the analyzer on every run (avoids **PermissionError** on locked OneDrive originals without dropping temp **.xlsm** copies next to the report). Override with **`--copy-to PATH.xlsm`** if you want a fixed staging copy.
+
+**Defaults (override as needed)**
+
+| Argument | Default |
+| --- | --- |
+| `--workbook` | `C:/Users/kewang/OneDrive - Nokia/Projects/Tools/J-Ant_Latest - Copy.xlsm` |
+| `--output-dir` | `C:\Users\kewang\OneDrive - Nokia\Projects\FOT\FOT report\DailyStatus` |
+| `--features` | `CB013987-SR` `CB014007` `14881` `15872` (space-separated list after the flag) |
+| `--end-fb` | `2611` (YYWW for **not committed** block only) |
+| `--file-prefix` | `J-Ant_CB_status` → output **`{prefix}_{YYYY-MM-DD}.xlsx`** using **today’s local date** |
+
+**Example**
+
+```bash
+python .cursor/skills/j-ant-excel-analysis/scripts/export_j_ant_cb_status_to_xlsx.py \
+  --workbook "C:/Users/kewang/OneDrive - Nokia/Projects/Tools/J-Ant_Latest - Copy.xlsm" \
+  --features CB013987-SR CB014007 CB014881 CB015872-SR \
+  --end-fb 2611 \
+  --output-dir "C:/Users/kewang/OneDrive - Nokia/Projects/FOT/FOT report/DailyStatus"
+```
+
+On success the script **prints the full path** of the saved **.xlsx** to stdout. Remind the user that **`--features`** tokens are **substrings** on **Summary** or **Key** (e.g. `14881` can match **`CB014881`**).
+
 ## Dependencies
 
 - Python 3.x with **openpyxl** (`pip install openpyxl`).
-- Filter logic and column mapping for **delayed-rc-fb**, **plan deviation**, **no RFC** (filter 9), **not / committed End FB** (filters 7–8), and other `--filter` values live in **`analyze_j_ant_workbook.py`**; keep **SKILL.md** in sync when changing that script.
+- Filter logic and column mapping for **delayed-rc-fb**, **plan deviation**, **no RFC** (filter 9), **not / committed End FB** (filters 7–8), and other `--filter` values live in **`analyze_j_ant_workbook.py`**; the multi-sheet writer lives in **`export_j_ant_cb_status_to_xlsx.py`**. Keep **SKILL.md** in sync when changing either script.

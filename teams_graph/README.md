@@ -3,7 +3,7 @@
 Create **1:1 or group** Teams chats and send **HTML** messages (optional **@mention**) using **Microsoft Graph** (`https://graph.microsoft.com/v1.0`), with **delegated** permissions. Intended flow:
 
 1. User signs in with Microsoft (**OAuth 2.0 authorization code**).
-2. Your **backend** exchanges the `code` for `access_token` + **`refresh_token`** (requires **`offline_access`** scope).
+2. Your **backend** exchanges the `code` for `access_token` + **`refresh_token`**. In **Azure**, add delegated **`offline_access`** so refresh tokens can be issued. In **Python MSAL**, do **not** put `offline_access` (or `openid` / `profile`) in your `scopes` list — MSAL adds them internally; including them causes `ValueError: You cannot use any scope value that is reserved`.
 3. Backend stores **`refresh_token`** in a **database** (encrypted); use **`AZURE_CLIENT_SECRET`** + MSAL **`acquire_token_by_refresh_token`** to obtain fresh **`access_token`** before Graph calls.
 
 ## Azure AD app registration
@@ -16,7 +16,7 @@ Create **1:1 or group** Teams chats and send **HTML** messages (optional **@ment
    - `Chat.Create`
    - `Chat.ReadWrite` (covers posting messages in typical setups; align with least privilege if your tenant allows finer scopes)
    - `User.Read.All` (resolve UPN → object id; you may replace with `User.Read` + different UX if policy forbids `.All`)
-   - `offline_access` (so the auth-code response includes **`refresh_token`**)
+   - `offline_access` — add in **Azure API permissions** so responses can include a **`refresh_token`**. Do **not** pass `offline_access` in the `scopes` list to MSAL (it is reserved; the library merges it for you).
 6. **Grant admin consent** if required by your tenant.
 
 Record **Directory (tenant) ID** → `AZURE_TENANT_ID`, **Application (client) ID** → `AZURE_CLIENT_ID`.

@@ -186,9 +186,9 @@ def emit_end_fb_commitment_markdown(
     print()
     if committed:
         print(
-            "| Key | Summary | Competence Area | End FB | FB Committed Status | Release committed FB (RC FB) | Risk Status | Stretch Goal Reason |"
+            "| Key | Summary | Competence Area | Assignee | End FB | FB Committed Status | Release committed FB (RC FB) | Risk Status | Stretch Goal Reason |"
         )
-        print("| --- | --- | --- | ---: | --- | ---: | --- | --- |")
+        print("| --- | --- | --- | --- | ---: | --- | ---: | --- | --- |")
         for rec in rows:
             print(
                 "| "
@@ -197,6 +197,8 @@ def emit_end_fb_commitment_markdown(
                 + md_escape_cell(rec.get("summary"))
                 + " | "
                 + md_escape_cell(rec.get("competence_area"))
+                + " | "
+                + md_escape_cell(rec.get("assignee"))
                 + " | "
                 + md_escape_cell(rec.get("end_fb"))
                 + " | "
@@ -211,9 +213,9 @@ def emit_end_fb_commitment_markdown(
             )
     else:
         print(
-            "| Key | Summary | Competence Area | End FB | Release committed FB (RC FB) | Risk Status | Stretch Goal Reason |"
+            "| Key | Summary | Competence Area | Assignee | End FB | Release committed FB (RC FB) | Risk Status | Stretch Goal Reason |"
         )
-        print("| --- | --- | --- | ---: | ---: | --- | --- |")
+        print("| --- | --- | --- | --- | ---: | ---: | --- | --- |")
         for rec in rows:
             print(
                 "| "
@@ -222,6 +224,8 @@ def emit_end_fb_commitment_markdown(
                 + md_escape_cell(rec.get("summary"))
                 + " | "
                 + md_escape_cell(rec.get("competence_area"))
+                + " | "
+                + md_escape_cell(rec.get("assignee"))
                 + " | "
                 + md_escape_cell(rec.get("end_fb"))
                 + " | "
@@ -334,9 +338,9 @@ def emit_delayed_rc_fb_markdown(
     print("\n\n".join(parts))
     print()
     print(
-        "| Key | Summary | Status | Competence Area | Release committed FB (RC FB) | End FB | Delay Explanation |"
+        "| Key | Summary | Status | Competence Area | Assignee | Release committed FB (RC FB) | End FB | Delay Explanation |"
     )
-    print("| --- | --- | --- | --- | ---: | ---: | --- |")
+    print("| --- | --- | --- | --- | --- | ---: | ---: | --- |")
     for rec in rows:
         print(
             "| "
@@ -347,6 +351,8 @@ def emit_delayed_rc_fb_markdown(
             + md_escape_cell(rec.get("status"))
             + " | "
             + md_escape_cell(rec.get("competence_area"))
+            + " | "
+            + md_escape_cell(rec.get("assignee"))
             + " | "
             + md_escape_cell(rec.get("release_committed_fb"))
             + " | "
